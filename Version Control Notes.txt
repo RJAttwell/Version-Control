@@ -1,0 +1,71 @@
+VERSION CONTROL:
+- The practice of tracking and managing changes to software code. 
+- If you screw up really bad you can return to a previous save point (version) of your code.
+
+COMMAND PROMPT:
+- cd to change directories
+- mkdir to create a directory 
+- touch to create a file
+- Type the file name and it's extension to open the file
+- dir to list all files inside a directory
+
+COMMITING VIA GIT:
+- Type git init
+- Add file(s) to staging area to pick and choose what files inside the working directory you wish to commit
+- Type git status
+- To add to staging area and track changes, type git add [file name]
+- To then commit, type git commit. Can add a message with -m "[ADD TEXT HERE]"
+- If you have multiple files you wish to add, you can use 'git add .'
+- Use 'git log' to see all your commits 
+- Can use 'git diff [FILE NAME]' to see what changed in your file
+
+RECAP:
+- Created a working directory which is the folder where you initialise your git repository.
+
+- Used 'git add' to push files to staging area because you may not want all your files to be tracked/committed. 
+
+- Use 'git commit' to commit to the local repository. Can use 'git checkout [FILE NAME]' to roll back to last position in our git repository if something went wrong.
+
+GITHUB AND REMOTE REPOSITORIES:
+- To commit files to repository on github, begin with 'git remote add origin'
+- Can change the name but it's good practice to just keep origin
+- Next we will push our local repository to the remote repository with the -u option which links the two together with 'git push -u origin master'
+- Can have a local repository and remote repository in complete parallel with each other and sync them 
+- Local is .git and Remote is Github.
+
+GIT IGNORE:
+- There are files that you do not want to uploaded to Github 
+- Put in "touch .gitignore"
+- ".gitignore" to open the file. It will open in the default text editor and you can add the files you don't want commited
+- If you have added files to the staging area you want to remove, you can use 'git rm --cached -r [FILE NAME] (or . for all of them)'
+
+CLONING:
+- Can pull down all the files/versions from a remote repository and store them
+inside your working directory
+- On a github repository, you'll find a green button that says "Clone or download".
+- In the command prompt, you can use 'git clone [REPOSITORY URL]'
+- Can cd into the project directory on your PC and use git log to see all their commits
+
+BRANCHING AND MERGING:
+- Can create a side branch instead of continously commiting to the main branch.
+- Can have two branches parallel and be developed on at the same time.
+- Can use a merge request to bring the new branch back to the main branch if the experimental code is deemed suitable 
+to be put back into the main project.
+- Can create branch with 'git branch [NEW BRANCH NAME]'
+- To switch between branches, just use 'git checkout [BRANCH NAME]'
+- When in new branch, you can make changes to files the commit them like normal and 
+the changes will be kept to the new branch 
+- To merge branches, you can use 'git merge [BRANCH NAME]'
+
+FORKING AND PULLING REQUESTS:
+- A fork is a copy of an exisiting repository.
+- The new owner disconnects the codebase from previous committers. 
+- Could then clone to work on it locally.
+- If the new owner then wants their updated code from their forked repository 
+to be implemented into the original repository, they can create a pull request.
+- If the code is acceptable then the pull request would be accepted by the owner of the original repository.
+- Can do all this on github. Can leave comments when creating a pull request.
+- Owner will click merge pull request. 
+
+GRAPH:
+https://i.gyazo.com/25832a3a10dc1497ab50398d834026af.png
